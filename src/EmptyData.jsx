@@ -6,6 +6,7 @@
  * All rights reserved.
  */
 const React = require('react');
+const classnames = require('classnames');
 
 class EmptyData extends React.Component {
 
@@ -16,10 +17,25 @@ class EmptyData extends React.Component {
 
   render() {
     const me = this;
-    const { prefixCls, children } = me.props; 
+    const { prefixCls, children, type, icon, largeIcon, style, className } = me.props;
+    const iconMap = {
+      normal: icon,
+      large: largeIcon,
+    };
     return (
-      <div className={`${prefixCls}`}>
-        <i className="kuma-icon kuma-icon-smile" />
+      <div
+        className={classnames({
+          [`${prefixCls} ${type}`]: true,
+          [className]: !!className,
+        })}
+        style={style}
+      >
+        <div
+          className={`${prefixCls}-icon`}
+          style={{
+            backgroundImage: `url(${iconMap[type]})`,
+          }}
+        />
         <div className={`${prefixCls}-content`}>{children}</div>
       </div>
     );
@@ -29,11 +45,19 @@ class EmptyData extends React.Component {
 EmptyData.defaultProps = {
   prefixCls: 'kuma-empty-data',
   children: '暂无数据',
+  type: 'normal',
+  icon: 'https://img.alicdn.com/tps/TB1SFFFOpXXXXXzXVXXXXXXXXXX-166-168.png',
+  largeIcon: 'https://img.alicdn.com/tps/TB1oWW_OXXXXXXyapXXXXXXXXXX-390-390.png',
 };
 
 
 // http://facebook.github.io/react/docs/reusable-components.html
 EmptyData.propTypes = {
+  prefixCls: React.PropTypes.string,
+  icon: React.PropTypes.string,
+  largeIcon: React.PropTypes.string,
+  style: React.PropTypes.object,
+  type: React.PropTypes.oneOf(['normal', 'large']),
 };
 
 EmptyData.displayName = 'EmptyData';
