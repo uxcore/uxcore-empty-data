@@ -7,4 +7,4 @@
  */
 import EmptyData from './EmptyData';
 
-module.exports = EmptyData;
+export default EmptyData;
