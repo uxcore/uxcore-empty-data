@@ -7,6 +7,7 @@
  */
 const React = require('react');
 const classnames = require('classnames');
+const PropTypes = require('prop-types');
 
 class EmptyData extends React.Component {
 
@@ -53,11 +54,11 @@ EmptyData.defaultProps = {
 
 // http://facebook.github.io/react/docs/reusable-components.html
 EmptyData.propTypes = {
-  prefixCls: React.PropTypes.string,
-  icon: React.PropTypes.string,
-  largeIcon: React.PropTypes.string,
-  style: React.PropTypes.object,
-  type: React.PropTypes.oneOf(['normal', 'large']),
+  prefixCls: PropTypes.string,
+  icon: PropTypes.string,
+  largeIcon: PropTypes.string,
+  style: PropTypes.object,
+  type: PropTypes.oneOf(['normal', 'large']),
 };
 
 EmptyData.displayName = 'EmptyData';
