@@ -5,5 +5,6 @@
  * Copyright 2015-2016, Uxcore Team, Alinw.
  * All rights reserved.
  */
+import EmptyData from './EmptyData';
 
-module.exports = require('./EmptyData');
+module.exports = EmptyData;
