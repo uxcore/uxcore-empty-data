@@ -36,7 +36,6 @@
   "enzyme": "^3.0.0",
   "enzyme-adapter-react-15": "^1.0.0",
   "es5-shim": "^4.5.8",
-  "eslint-plugin-babel": "^4.1.2",
   "expect.js": "~0.3.1",
   "kuma-base": "1.x",
   "react": "15.x",

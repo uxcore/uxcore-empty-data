@@ -10,8 +10,8 @@ const React = require('react');
 const EmptyData = require('../src');
 const Button = require('uxcore-button');
 
-class Demo extends React.Component {
 
+class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,6 +35,29 @@ class Demo extends React.Component {
           <div>你还没有创建目标哦</div>
           <Button type="outline" style={{ marginTop: '10px' }}>添加目标</Button>
         </EmptyData>
+        <h2>其他类型缺省页</h2>
+        {[{
+          img: 'access_restriction',
+          name: '权限限制',
+        }, {
+          img: 'active_empty',
+          name: '查询类空页面',
+        }, {
+          img: 'request_error',
+          name: '网页请求错误',
+        }, {
+          img: 'search_empty',
+          name: '网页请求错误',
+        }, {
+          img: 'unknown_error',
+          name: '未知错误',
+        }].map(item => (
+          <EmptyData style={{ width: '200px', display: 'inline-block' }} icon={`https://g.alicdn.com/uxcore/pic/${item.img}.png`}>
+            <div style={{ lineHeight: 2 }}>
+              <div>{item.name}</div>
+            </div>
+          </EmptyData>
+        ))}
       </div>
     );
   }
