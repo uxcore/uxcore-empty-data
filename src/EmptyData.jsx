@@ -23,8 +23,8 @@ export default class EmptyData extends React.Component {
     prefixCls: 'kuma-empty-data',
     children: '暂无数据',
     type: 'normal',
-    icon: 'http://g.alicdn.com/uxcore/pic/empty.png',
-    largeIcon: 'http://g.alicdn.com/uxcore/pic/empty.png',
+    icon: '//g.alicdn.com/uxcore/pic/empty.png',
+    largeIcon: '//g.alicdn.com/uxcore/pic/empty.png',
   };
 
   static displayName = 'EmptyData';

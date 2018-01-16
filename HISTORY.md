@@ -1,5 +1,9 @@
 # history
 
+## 0.1.5
+
+* `FIXED` default logo url is http
+
 ## 0.1.4
 
 * `CHANGED` change default empty image

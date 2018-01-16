@@ -52,7 +52,7 @@ class Demo extends React.Component {
           img: 'unknown_error',
           name: '未知错误',
         }].map(item => (
-          <EmptyData style={{ width: '200px', display: 'inline-block' }} icon={`https://g.alicdn.com/uxcore/pic/${item.img}.png`}>
+          <EmptyData style={{ width: '200px', display: 'inline-block' }} icon={`//g.alicdn.com/uxcore/pic/${item.img}.png`}>
             <div style={{ lineHeight: 2 }}>
               <div>{item.name}</div>
             </div>
