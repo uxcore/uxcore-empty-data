@@ -1,5 +1,9 @@
 # history
 
+## 0.1.6
+
+* `CHANGED` upgrade react to v16
+
 ## 0.1.5
 
 * `FIXED` default logo url is http
